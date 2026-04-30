@@ -13,7 +13,7 @@
 
   --color-bg: #ffffff;
   --color-text: #111111;
-  --color-text-muted: #6b6b6b;
+  --color-text-muted: #4a4a4a;
   --color-text-subtle: #999999;
   --color-border: rgba(0, 0, 0, 0.12);
   --color-border-medium: rgba(0, 0, 0, 0.2);
@@ -30,13 +30,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #111111;
-    --color-text: #f0f0ee;
-    --color-text-muted: #a0a09e;
-    --color-text-subtle: #666664;
-    --color-border: rgba(255, 255, 255, 0.1);
-    --color-border-medium: rgba(255, 255, 255, 0.18);
-    --color-surface: #1c1c1a;
+    --color-bg: #161616;
+    --color-text: #edede9;
+    --color-text-muted: #c4c4c0;
+    --color-text-subtle: #888886;
+    --color-border: rgba(255, 255, 255, 0.12);
+    --color-border-medium: rgba(255, 255, 255, 0.22);
+    --color-surface: #202020;
   }
 }
 
@@ -85,7 +85,7 @@ a {
 
 .nav-logo {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 24px;
   text-decoration: none;
   color: var(--color-text);
 }
@@ -97,7 +97,7 @@ a {
 }
 
 .nav-link {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--color-text-muted);
   text-decoration: none;
   transition: color 0.15s;
@@ -108,7 +108,7 @@ a {
 }
 
 .nav-cta {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   background: var(--color-text);
   color: var(--color-bg);
@@ -129,8 +129,8 @@ a {
 
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 16px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
   margin-bottom: 1.25rem;
@@ -151,7 +151,7 @@ a {
 }
 
 .hero-sub {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.75;
   color: var(--color-text-muted);
   max-width: 460px;
@@ -166,7 +166,7 @@ a {
 }
 
 .btn-primary {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   background: var(--color-text);
   color: var(--color-bg);
@@ -219,7 +219,7 @@ a {
 }
 
 .stat-label {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-text-muted);
   line-height: 1.5;
 }
@@ -232,8 +232,8 @@ a {
 /* ── Section label ───────────────────────── */
 .section-label {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 16px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
   margin-bottom: 1.5rem;
@@ -261,7 +261,7 @@ a {
 }
 
 .work-company {
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 500;
 }
 
@@ -273,7 +273,7 @@ a {
 }
 
 .work-role {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--color-text-muted);
   margin-bottom: 0.75rem;
 }
@@ -583,9 +583,9 @@ a {
     font-size: 17px;
   }
 
-  .nav-link {
+  /* .nav-link {
     font-size: 14px;
-  }
+  } */
 
   .stat-label {
     font-size: 13px;
