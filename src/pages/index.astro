@@ -72,8 +72,8 @@ const services = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Senior Rails contractor based in St. Pete, FL. 7+ years building scalable systems in Ruby on Rails and PostgreSQL for SaaS, fintech, and payments companies." />
-    <title>Fuzz Worley — Senior Rails Contractor</title>
+    <meta name="description" content="Full-stack contractor based in St. Pete, FL. 7+ years building and scaling production systems at high-growth SaaS companies. Web, mobile, payments, and more." />
+    <title>Fuzz Worley — Full-Stack Contractor</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
 
@@ -81,6 +81,7 @@ const services = [
     <div class="container">
 
       <!-- Nav -->
+      <div class="nav-wrapper">
       <nav class="nav">
         <a class="nav-logo" href="/">Fuzz Worley</a>
         <div class="nav-links">
@@ -89,18 +90,19 @@ const services = [
           <a class="nav-cta" href="#contact">Get in touch</a>
         </div>
       </nav>
+      </div>
 
       <!-- Hero + Stats -->
       <div class="above-fold">
         <section class="hero">
-          <p class="eyebrow">Rails contractor · St. Pete, FL · Available now</p>
+          <p class="eyebrow">Full-stack contractor · St. Pete, FL · Available now</p>
           <h1 class="hero-headline">
-            Senior Rails engineer for <em>SaaS teams that need it done right</em>
+            Senior engineer for <em>SaaS teams that need it done right</em>
           </h1>
           <p class="hero-sub">
             I've shipped payments systems, compliance automation, and growth experiments
-            at MasterClass, Secureframe, and Emeritus. 7+ years in Rails/PostgreSQL.
-            $115–$135/hr.
+            at MasterClass, Secureframe, and Emeritus. 7+ years building and scaling
+            production systems at high-growth SaaS companies.
           </p>
           <div class="hero-actions">
             <a class="btn-primary" href="#contact">Work with me</a>
@@ -169,14 +171,17 @@ const services = [
 
       <!-- CTA / Contact -->
       <section id="contact" class="cta-section">
-        <div class="rate-pill">$115–$135/hr · Available for new engagements</div>
         <h2 class="cta-headline">Let's build something together</h2>
         <p class="cta-sub">
           Drop me a line with what you're working on.<br />
           I'll get back to you within one business day.
         </p>
         <!-- TODO: replace with your email or a Formspree form -->
-        <a class="btn-primary" href="mailto:hello@fuzzworley.dev">Get in touch</a>
+        <form class="contact-form" action="https://formspree.io/f/xeenjvap" method="POST">
+          <input type="email" name="email" placeholder="your@email.com" required />
+          <textarea name="message" placeholder="What are you working on?" rows="4" required></textarea>
+          <button type="submit" class="btn-primary">Send message</button>
+        </form>
       </section>
 
       <!-- Footer -->
