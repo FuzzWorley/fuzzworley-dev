@@ -8,7 +8,7 @@ const stats = [
   },
   {
     num: "23×",
-    label: "faster TTFB on SEO pages — 5.3s down to 233ms"
+    label: "faster page load on SEO pages — 5.3s down to 233ms"
   },
   {
     num: "17%",
@@ -18,10 +18,18 @@ const stats = [
 
 const work = [
   {
+    company: "Signalfire",
+    years: "2026–present",
+    role: "Co-founder & Engineer",
+    detail: "Turns physical public spaces into discovery points for community groups. A QR-coded totem marks where a group meets — scanning it opens a location-specific bulletin board with events, recurring meetups, and links to join. Full-stack web app with native iOS and Android clients (not yet publicly available), piloting in St. Petersburg, FL.",
+    link: { href: "https://signalfire.live/about", label: "signalfire.live" },
+    tags: ["Rails", "React", "iOS", "Android", "Full-stack"]
+  },
+  {
     company: "MasterClass",
     years: "2016–2020",
     role: "Software Engineer → Senior Software Engineer I",
-    detail: "Led backend engineering for pricing and referral experiments — among the most critical business work that year. Built PayPal/Braintree subscription integrations (<strong>+6% conversion</strong>). Reduced SEO page TTFB from <strong>5.3s → 233ms</strong>, cutting bounce rate significantly.",
+    detail: "Led backend engineering for pricing and referral experiments — among the most critical business work that year. Built PayPal/Braintree subscription integrations (<strong>+6% conversion</strong>). Reduced SEO page load time from <strong>5.3s → 233ms</strong>, cutting bounce rate significantly.",
     tags: ["Rails", "PostgreSQL", "GraphQL", "React", "A/B testing"]
   },
   {
@@ -42,20 +50,20 @@ const work = [
 
 const services = [
   {
-    title: "API & backend development",
-    desc: "New features, integrations, and greenfield Rails APIs. Clean, tested, documented."
+    title: "Full-stack web development",
+    desc: "End-to-end Rails APIs and React frontends. New products, new features, or rescuing existing codebases."
+  },
+  {
+    title: "Mobile apps",
+    desc: "React Native for iOS and Android. Shared codebase, native feel, shipped to both stores."
   },
   {
     title: "Payments & billing systems",
     desc: "Stripe, Braintree, multi-currency. I've rearchitected payment systems at scale."
   },
   {
-    title: "Performance & reliability",
-    desc: "Slow queries, N+1s, TTFB issues. I find what's costing you conversions."
-  },
-  {
-    title: "Compliance integrations",
-    desc: "SOC 2, AWS/GCP/Azure automation. Deep experience from Secureframe."
+    title: "API & backend development",
+    desc: "Greenfield Rails APIs, third-party integrations, and backend features. Clean, tested, documented."
   }
 ];
 ---
@@ -82,31 +90,32 @@ const services = [
         </div>
       </nav>
 
-      <!-- Hero -->
-      <section class="hero">
-        <p class="eyebrow">Rails contractor · St. Pete, FL · Available now</p>
-        <h1 class="hero-headline">
-          Senior Rails engineer for <em>SaaS teams that need it done right</em>
-        </h1>
-        <p class="hero-sub">
-          I've shipped payments systems, compliance automation, and growth experiments
-          at MasterClass, Secureframe, and Emeritus. 7+ years in Rails/PostgreSQL.
-          $115–$135/hr.
-        </p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="#contact">Work with me</a>
-          <a class="btn-ghost" href="#work">See my work ↓</a>
-        </div>
-      </section>
-
-      <!-- Stats -->
-      <div class="stats-row">
-        {stats.map(s => (
-          <div class="stat">
-            <div class="stat-num">{s.num}</div>
-            <div class="stat-label">{s.label}</div>
+      <!-- Hero + Stats -->
+      <div class="above-fold">
+        <section class="hero">
+          <p class="eyebrow">Rails contractor · St. Pete, FL · Available now</p>
+          <h1 class="hero-headline">
+            Senior Rails engineer for <em>SaaS teams that need it done right</em>
+          </h1>
+          <p class="hero-sub">
+            I've shipped payments systems, compliance automation, and growth experiments
+            at MasterClass, Secureframe, and Emeritus. 7+ years in Rails/PostgreSQL.
+            $115–$135/hr.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#contact">Work with me</a>
+            <a class="btn-ghost" href="#work">See my work ↓</a>
           </div>
-        ))}
+        </section>
+
+        <div class="stats-row">
+          {stats.map(s => (
+            <div class="stat">
+              <div class="stat-num">{s.num}</div>
+              <div class="stat-label">{s.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <!-- Work -->
@@ -121,6 +130,7 @@ const services = [
               </div>
               <div class="work-role">{w.role}</div>
               <div class="work-detail" set:html={w.detail} />
+              {w.link && <a class="work-link" href={w.link.href} target="_blank" rel="noopener">{w.link.label} ↗</a>}
               <div class="tags">
                 {w.tags.map(t => <span class="tag">{t}</span>)}
               </div>
