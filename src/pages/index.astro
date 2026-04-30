@@ -1,0 +1,183 @@
+---
+import '../styles/global.css';
+
+const stats = [
+  {
+    num: "6%",
+    label: "conversion lift via PayPal/Braintree experiments at MasterClass"
+  },
+  {
+    num: "23×",
+    label: "faster TTFB on SEO pages — 5.3s down to 233ms"
+  },
+  {
+    num: "17%",
+    label: "conversion lift from category carousel feature"
+  }
+];
+
+const work = [
+  {
+    company: "MasterClass",
+    years: "2016–2020",
+    role: "Software Engineer → Senior Software Engineer I",
+    detail: "Led backend engineering for pricing and referral experiments — among the most critical business work that year. Built PayPal/Braintree subscription integrations (<strong>+6% conversion</strong>). Reduced SEO page TTFB from <strong>5.3s → 233ms</strong>, cutting bounce rate significantly.",
+    tags: ["Rails", "PostgreSQL", "GraphQL", "React", "A/B testing"]
+  },
+  {
+    company: "Emeritus",
+    years: "2020–2022",
+    role: "Senior Software Engineer",
+    detail: "Rearchitected the entire payments system to reduce Salesforce dependency and enable new functionality. Designed multi-currency support and a Multi-Armed Bandit testing framework from scratch.",
+    tags: ["Rails", "Payments", "MAB testing", "Multi-currency"]
+  },
+  {
+    company: "Secureframe",
+    years: "2022–2023",
+    role: "Senior Software Engineer",
+    detail: "Built and maintained compliance automation integrations (Google, AWS, Microsoft). Created a production data replication and anonymization tool to improve debugging and environment consistency.",
+    tags: ["Rails", "Compliance automation", "AWS", "Data tooling"]
+  }
+];
+
+const services = [
+  {
+    title: "API & backend development",
+    desc: "New features, integrations, and greenfield Rails APIs. Clean, tested, documented."
+  },
+  {
+    title: "Payments & billing systems",
+    desc: "Stripe, Braintree, multi-currency. I've rearchitected payment systems at scale."
+  },
+  {
+    title: "Performance & reliability",
+    desc: "Slow queries, N+1s, TTFB issues. I find what's costing you conversions."
+  },
+  {
+    title: "Compliance integrations",
+    desc: "SOC 2, AWS/GCP/Azure automation. Deep experience from Secureframe."
+  }
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Senior Rails contractor based in St. Pete, FL. 7+ years building scalable systems in Ruby on Rails and PostgreSQL for SaaS, fintech, and payments companies." />
+    <title>Fuzz Worley — Senior Rails Contractor</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- Nav -->
+      <nav class="nav">
+        <a class="nav-logo" href="/">Fuzz Worley</a>
+        <div class="nav-links">
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-cta" href="#contact">Get in touch</a>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <section class="hero">
+        <p class="eyebrow">Rails contractor · St. Pete, FL · Available now</p>
+        <h1 class="hero-headline">
+          Senior Rails engineer for <em>SaaS teams that need it done right</em>
+        </h1>
+        <p class="hero-sub">
+          I've shipped payments systems, compliance automation, and growth experiments
+          at MasterClass, Secureframe, and Emeritus. 7+ years in Rails/PostgreSQL.
+          $115–$135/hr.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#contact">Work with me</a>
+          <a class="btn-ghost" href="#work">See my work ↓</a>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        {stats.map(s => (
+          <div class="stat">
+            <div class="stat-num">{s.num}</div>
+            <div class="stat-label">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Work -->
+      <section id="work">
+        <p class="section-label">Selected work</p>
+        <div class="work-list">
+          {work.map(w => (
+            <div class="work-item">
+              <div class="work-meta">
+                <span class="work-company">{w.company}</span>
+                <span class="work-years">{w.years}</span>
+              </div>
+              <div class="work-role">{w.role}</div>
+              <div class="work-detail" set:html={w.detail} />
+              <div class="tags">
+                {w.tags.map(t => <span class="tag">{t}</span>)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services">
+        <p class="section-label">Services</p>
+        <div class="services-grid">
+          {services.map(s => (
+            <div class="service-card">
+              <div class="service-title">{s.title}</div>
+              <div class="service-desc">{s.desc}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Fintech banner -->
+      <div class="fintech-banner">
+        <div class="fintech-icon">₿</div>
+        <div>
+          <div class="fintech-title">Fintech & crypto background</div>
+          <div class="fintech-desc">
+            Founded Bitcopia in 2012 — one of the first bitcoin brokerages — and ran it
+            for four years, handling hundreds of orders per day with zero loss of funds.
+            I understand the security, compliance, and reliability requirements of financial
+            systems firsthand. Useful for crypto exchanges, payment processors, and
+            fintech startups.
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA / Contact -->
+      <section id="contact" class="cta-section">
+        <div class="rate-pill">$115–$135/hr · Available for new engagements</div>
+        <h2 class="cta-headline">Let's build something together</h2>
+        <p class="cta-sub">
+          Drop me a line with what you're working on.<br />
+          I'll get back to you within one business day.
+        </p>
+        <!-- TODO: replace with your email or a Formspree form -->
+        <a class="btn-primary" href="mailto:hello@fuzzworley.dev">Get in touch</a>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <span class="footer-name">fuzzworley.dev</span>
+        <div class="footer-links">
+          <a class="footer-link" href="https://linkedin.com/in/stevenworley" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/fuzzworley" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>
